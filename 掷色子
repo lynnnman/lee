@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #dice-container {
+            text-align: center;
+        }
+        #dice-result {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #roll-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dice-container">
+        <div id="dice-result">Roll the dice!</div>
+        <button id="roll-button">Roll Dice</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const diceResultElement = document.getElementById('dice-result');
+            const rollButton = document.getElementById('roll-button');
+
+            rollButton.addEventListener('click', () => {
+                const diceValue = Math.floor(Math.random() * 6) + 1; // 生成1到6之间的随机整数
+                diceResultElement.textContent = `Dice Rolled: ${diceValue}`;
+            });
+        });
+    </script>
+</body>
+</html>
+//这是一个掷色子的前端游戏。感觉不错哦。
